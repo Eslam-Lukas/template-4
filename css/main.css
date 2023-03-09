@@ -1,0 +1,510 @@
+* {
+	box-sizing: border-box;
+}
+:root {
+	--main-padding: 10px 0px;
+	--secondary-padding: 10px;
+	--main-comp-padding: 20px;
+	--set-margin: 0px;
+	--top-margin: 10px;
+	--overlay: #0003;
+	--main-comp-background: #ffffff;
+	--main-color: #478ac9;
+	--secondry-color: #e9f2fa;
+	--third-color: #f2f2f2;
+	--main-tx-color: #478ac9;
+	--transparet-tx-color: #777;
+	--secondary-tx-color: #ffffff;
+	--comp-radius: 25px;
+	--transition: 0.3s;
+}
+.container {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-flow: row wrap;
+}
+.componnt {
+	padding: var(--main-comp-padding);
+	background-color: var(--main-comp-background);
+}
+.navbar {
+	padding: var(--main-padding);
+	text-transform: capitalize;
+}
+.hide {
+	display: none;
+}
+.show {
+	display: flex !important;
+}
+/* [01]nav */
+
+.navbar .logo {
+	font-weight: bold;
+	color: var(--main-tx-color);
+	margin: 0%;
+}
+.navbar .nav-link {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-basis: 50%;
+	margin: 0;
+	padding: 0;
+}
+.navbar .nav-link > li > a {
+	text-decoration: none;
+	color: var(--transparet-tx-color);
+}
+.navbar .search {
+	position: relative;
+}
+
+.navbar .search > i {
+	position: absolute;
+	right: 0;
+	top: -7px;
+}
+.navbar .search > input {
+	border: 1px solid var(--transparet-tx-color);
+	color: var(--main-color);
+	padding: 5px;
+	outline: none;
+	position: absolute;
+	right: 0;
+	top: 20px;
+	width: 150px;
+	display: none;
+}
+.navbar .container > .navicon {
+	display: none;
+}
+/* landing sect  */
+.landing {
+	position: relative;
+	background-image: url(../images/smiling-female-business-leader-with-arms-crossed.jpg);
+	height: calc(100vh - 20px);
+	background-size: cover;
+}
+.landing::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--overlay);
+}
+.landing .container {
+	display: block;
+}
+.landing .componnt {
+	position: absolute;
+	top: 76%;
+	left: 67%;
+	padding-right: 40px;
+	border-bottom-left-radius: 25px;
+	border-top-left-radius: 25px;
+}
+.landing .componnt h5 {
+	margin: var(--set-margin);
+	font-size: 11px;
+}
+.landing .componnt h1 {
+	color: var(--main-color);
+	font-size: 30px;
+	margin: var(--top-margin) var(--set-margin);
+}
+.landing .componnt p {
+	color: var(--transparet-tx-color);
+	margin: var(--set-margin);
+	font-size: 9px;
+}
+/*[03]intro sect */
+.intro {
+	background-color: var(--secondry-color);
+}
+.intro > .container > .box {
+	flex-basis: 45%;
+	text-transform: capitalize;
+}
+.intro > .container > .box:first-of-type {
+	background-color: transparent;
+}
+.intro > .container > .box:first-of-type h1:first-of-type {
+	color: var(--main-color);
+}
+.intro > .container > .box:first-of-type p {
+	position: relative;
+	padding-left: var(--main-comp-padding);
+	font-weight: bold;
+}
+.intro > .container > .box:first-of-type p::before {
+	content: "";
+	position: absolute;
+	border: 10px solid;
+	border-color: transparent;
+	border-left-color: var(--main-color);
+	left: 0;
+}
+.intro > .container > .box:last-of-type {
+	border-bottom-left-radius: var(--comp-radius);
+	border-top-left-radius: var(--comp-radius);
+}
+.intro > .container > .box:last-of-type p:first-of-type {
+	font-weight: 700;
+	text-transform: capitalize;
+}
+.intro > .container > .box:last-of-type p:last-of-type {
+	color: var(--main-tx-color);
+}
+/* [04] cards */
+.cards .container {
+	padding: 25px 0;
+}
+.cards .container .card {
+	flex-basis: 20%;
+	min-height: 400px;
+	max-height: 400px;
+}
+.cards .container .card:first-child {
+	font-weight: bold;
+	font-size: 38px;
+	padding: var(--main-comp-padding);
+	padding-bottom: 70px;
+}
+.cards .container .card:first-child p {
+	margin: 23px 0;
+}
+.cards .container .card:not(:first-child) {
+	background-color: var(--main-color);
+	color: var(--secondary-tx-color);
+	border-radius: var(--comp-radius);
+	padding: var(--main-comp-padding);
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+}
+.cards .container .card:not(:first-child) p {
+	font-size: 23px;
+	padding-bottom: 40px;
+}
+.cards .container .card:not(:first-child) span {
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	border-radius: 50%;
+	position: relative;
+	align-self: flex-end;
+}
+.cards .container .card:not(:first-child) i {
+	font-size: 50px;
+	color: var(--main-color);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+/* [5] landing */
+.qs {
+	position: relative;
+	background-image: url(../images/low-angle-businessman.jpg);
+	padding: var(--main-padding);
+	height: 100vh;
+	background-size: cover;
+}
+.qs .container {
+	display: block;
+}
+.qs .container .componnt {
+	position: absolute;
+	width: 35%;
+	padding-right: calc(2 * var(--main-comp-padding));
+	top: 50%;
+	transform: translateY(-50%);
+	border-top-right-radius: var(--comp-radius);
+	border-bottom-right-radius: var(--comp-radius);
+}
+.qs .out {
+	background-color: var(--main-comp-background);
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+}
+.qs .out h3 {
+	font-size: 35px;
+	color: var(--main-color);
+}
+.qs .out p {
+	color: var(--transparet-tx-color);
+}
+/* [06]trophy */
+.trophy .container {
+	text-align: center;
+}
+.trophy .container .box {
+	flex-basis: 20%;
+	background-color: var(--third-color);
+	padding: var(--main-padding);
+	border-radius: var(--comp-radius);
+}
+.trophy .container .box h1 {
+	color: var(--main-color);
+	font-size: 70px;
+	margin: 20px auto;
+}
+/* [07]portofolio */
+.portofolio {
+	padding: var(--main-padding);
+}
+.portofolio .container .card {
+	flex-basis: 30%;
+}
+.portofolio .container .card img {
+	width: 100%;
+}
+.portofolio .out {
+	text-align: center;
+	padding: 0 250px;
+	letter-spacing: 1.5px;
+}
+/* [08] contact */
+.contact {
+	background-color: var(--main-color);
+	padding: var(--main-padding);
+}
+
+.contact .container {
+	display: block;
+	padding: var(--main-padding);
+}
+.contact .container h1 {
+	color: var(--secondary-tx-color);
+	width: 50%;
+}
+.contact .container button {
+	background-color: var(--main-comp-background);
+	padding: var(--secondary-padding) var(--main-comp-padding);
+	outline: none;
+	border: none;
+	border-radius: var(--comp-radius);
+	text-transform: capitalize;
+}
+/* [09]  benefits */
+.benefits .container {
+	display: block;
+}
+.benefits .container .cards {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+.benefits .container .cards div {
+	flex-basis: 30%;
+}
+.benefits .container .cards div h1 {
+	color: var(--main-color);
+}
+
+.benefits .container .cards div p {
+	color: var(--transparet-tx-color);
+}
+/*[10] pricing */
+.pricing {
+	padding: 50px 0;
+}
+.pricing .container {
+	padding: var(--main-padding);
+	align-items: center;
+	text-transform: capitalize;
+}
+.pricing .container div {
+	flex-basis: 30%;
+	min-height: 400px;
+	max-height: 400px;
+	position: relative;
+	border-radius: var(--comp-radius);
+}
+.pricing .container div p:first-of-type {
+	margin: 25px 0;
+}
+.pricing .container div button {
+	padding: var(--secondary-padding) var(--main-comp-padding);
+	border-radius: var(--comp-radius);
+	border: none;
+	outline: none;
+	text-transform: capitalize;
+	cursor: pointer;
+}
+.pricing .container div:first-child button {
+	background-color: var(--main-color);
+	color: var(--secondary-tx-color);
+}
+
+.pricing .container div:not(:first-child) {
+	background-color: var(--main-color);
+	color: var(--secondary-tx-color);
+	text-align: center;
+	padding-top: 50px;
+}
+.pricing .container div:not(:first-child) span {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background-color: #ddd;
+	border-radius: 50%;
+	top: 0px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.pricing .container div:not(:first-child) span i {
+	position: relative;
+	z-index: 1;
+	color: #777;
+	top: 30%;
+	font-size: 45px;
+}
+.pricing .container div:not(:first-child) h1 {
+	font-size: 40px;
+}
+
+.pricing .container div:not(:first-child) p:not(:first-of-type) {
+	margin: 10px 0;
+}
+.pricing .container div:not(:first-child) button {
+	background-color: var(--main-comp-background);
+	color: black;
+	margin-top: 20px;
+}
+/* [11]intro */
+#intro02 > .container div:first-child p::before {
+	display: none;
+}
+#intro02 > .container div:first-child p {
+	padding: 0;
+}
+#intro02 > .container div:first-child p:last-of-type {
+	color: var(--transparet-tx-color);
+	font-weight: normal;
+}
+#intro02 > .container div:last-child {
+	padding: calc(var(--main-comp-padding) * 2) var(--main-comp-padding);
+}
+#intro02 > .container div:last-child p {
+	color: var(--transparet-tx-color);
+	font-weight: normal;
+}
+#intro02 > .container div:last-child button {
+	color: var(--secondary-tx-color);
+	outline: none;
+	border: none;
+	background-color: var(--main-color);
+	border-radius: var(--comp-radius);
+	padding: var(--secondary-padding) var(--main-comp-padding);
+	text-transform: capitalize;
+}
+/* [12] form */
+.form {
+	background-image: url(../images/young-handsome-business-man-with-laptop-office.jpg);
+	position: relative;
+	background-size: cover;
+	height: calc(100vh - 100px);
+	padding: 50px 0px;
+	z-index: -1;
+}
+.form::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: var(--overlay);
+	position: absolute;
+	z-index: -1;
+}
+.form .container {
+	display: block;
+	height: 100%;
+}
+.form .container form {
+	background-color: var(--main-comp-background);
+	border-bottom-right-radius: var(--comp-radius);
+	border-top-right-radius: var(--comp-radius);
+	padding: var(--main-comp-padding);
+	width: 50%;
+	height: 100%;
+	text-transform: capitalize;
+}
+.form .container form :not(:only-child) {
+	display: block;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+}
+
+.form .container form > textarea,
+.form .container form > input {
+	background-color: var(--secondry-color);
+	margin-bottom: calc(var(--top-margin) * 2);
+	height: calc(100% / 9);
+	width: 100%;
+}
+.form .container form > textarea {
+	height: calc((100% / 9) * 2);
+}
+.form .container form > label:first-of-type,
+.form .container form > label:last-of-type {
+	margin-bottom: 20px;
+}
+.form .container form div > :only-of-type {
+	display: inline-block;
+	margin-bottom: calc(var(--top-margin) * 2);
+}
+.form .container form div span {
+	color: var(--main-color);
+}
+.form .container form input[type="submit"] {
+	width: 100%;
+	border-radius: var(--comp-radius);
+	color: var(--secondary-tx-color);
+	background-color: var(--main-color);
+}
+/* [13]footer */
+.footer {
+	background-color: var(--transparet-tx-color);
+	height: 100px;
+	position: relative;
+}
+footer .container {
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	text-transform: capitalize;
+}
+footer .container span:first-of-type {
+	color: var(--main-color);
+	font-weight: bold;
+	font-size: 35px;
+}
+footer .container span:nth-child(2) {
+	color: var(--secondary-tx-color);
+}
+footer .container span:last-of-type i {
+	font-size: 25px;
+	margin-left: 5px;
+}
+
+footer .container span:last-of-type :nth-child(1) {
+	color: white;
+}
+footer .container span:last-of-type :nth-child(2) {
+	color: brown;
+}
+footer .container span:last-of-type :nth-child(3) {
+	color: skyblue;
+}
+footer .container span:last-of-type :nth-child(4) {
+	color: green;
+}

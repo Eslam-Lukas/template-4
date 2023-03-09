@@ -1,0 +1,21 @@
+@media (min-width: 992px) and (max-width: 1199px) {
+	.landing .componnt {
+		top: 70%;
+		left: 31%;
+	}
+	.landing .componnt h5 {
+		font-size: 33px;
+	}
+
+	.landing .componnt h1 {
+		font-size: 85px;
+	}
+	.landing .componnt p {
+		font-size: 23px;
+	}
+
+	.form .container form {
+		width: 70%;
+		margin: 20px 0;
+	}
+}

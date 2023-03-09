@@ -1,0 +1,116 @@
+@media (max-width: 767px) {
+	.container {
+		max-width: 750px;
+		flex-flow: column wrap;
+	}
+	/* [01]nav */
+	.navbar .container {
+		position: relative;
+		flex-flow: row;
+	}
+	.navbar .container > .navicon {
+		display: block;
+	}
+	.navbar .nav-link {
+		display: none;
+		flex-flow: column wrap;
+		position: absolute;
+		right: -10px;
+		top: 150%;
+		z-index: 1;
+	}
+	.navbar .nav-link {
+		flex-flow: column wrap;
+	}
+	.navbar .search {
+		bottom: -10px;
+		right: -15px;
+	}
+	.navbar .search > input {
+		right: -20px;
+		top: -10px;
+	}
+	.navbar .search > i {
+		right: -15px;
+	}
+	/* landing sect  */
+	.landing .componnt {
+		top: 66%;
+		left: 46%;
+	}
+	/*[03]intro sect */
+	.intro .container {
+		padding-bottom: 20px;
+	}
+	/* [04] cards */
+	.cards .container {
+		gap: 20px;
+	}
+	.cards .container .card {
+		min-height: 100px;
+		width: 100%;
+	}
+	.cards .container .card:first-child {
+		font-size: 25px;
+		padding-bottom: 20px;
+	}
+	.cards .container .card:not(:first-child) p {
+		margin-bottom: 10px;
+		padding-bottom: 0%;
+	}
+	/* [06]trophy  */
+	.qs .container .componnt {
+		width: 50%;
+		top: 40%;
+	}
+
+	.trophy .container {
+		flex-flow: row wrap;
+		gap: 20px;
+	}
+	.trophy .container > .box {
+		flex-basis: 45%;
+	}
+	/* [07] portofolio */
+	.portofolio .out {
+		padding: 10px 25px;
+	}
+
+	/* [08]contact */
+	.contact .container h1 {
+		width: 90%;
+	}
+	/* [09] */
+	.pricing .container {
+		flex-flow: row wrap;
+	}
+	.pricing .container div:first-of-type {
+		flex-basis: 100%;
+		min-height: 100px;
+		order: 3;
+	}
+	.pricing .container div:not(:first-of-type) {
+		flex-basis: 45%;
+	}
+	/* [12]form */
+	.form {
+		padding: 20px 0px;
+		z-index: -1;
+	}
+	.form .container form {
+		width: 80%;
+		margin-left: -30px;
+	}
+
+	footer .container {
+		flex-flow: row wrap;
+		gap: 20px;
+	}
+
+	footer .container span:nth-child(2) {
+		font-size: 15px;
+		order: 3;
+		align-self: center;
+		color: var(--main-color);
+	}
+}
